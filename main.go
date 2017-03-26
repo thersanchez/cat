@@ -17,10 +17,10 @@ func main() {
 }
 
 func parseArgs() (string, error) {
-	if len(os.Args) == 1 {
+	if len(os.Args) != 2 {
 		return "", fmt.Errorf("Invalid number of arguments (%d)", len(os.Args)-1)
 	}
-	return "", fmt.Errorf("TODO")
+	return os.Args[1], nil
 }
 
 func usage() {
